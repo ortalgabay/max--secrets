@@ -10,3 +10,14 @@ resource "aws_s3_bucket" "f2" {
   force_destroy = true
 
 }
+
+resource "aws_s3_bucket" "f2_log_bucket" {
+  bucket = "f2-log-bucket"
+}
+
+resource "aws_s3_bucket_logging" "f2" {
+  bucket = aws_s3_bucket.f2.id
+
+  target_bucket = aws_s3_bucket.f2_log_bucket.id
+  target_prefix = "log/"
+}
