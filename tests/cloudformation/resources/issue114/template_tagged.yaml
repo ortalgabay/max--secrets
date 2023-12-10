@@ -27,6 +27,8 @@ Resources:
           Value: !Ref EnvironmentName
         - Key: new_tag
           Value: new_value
+        - Key: yor_trace
+          Value: 555de13f-6b3c-4f2c-88f3-e3c7d1811307
   InternetGateway:
     Type: AWS::EC2::InternetGateway
     Properties:
@@ -35,3 +37,5 @@ Resources:
           Value: !Ref EnvironmentName
         - Key: new_tag
           Value: new_value
+        - Key: yor_trace
+          Value: adaeb9c7-b68f-4a93-aad3-aa05e49a3955

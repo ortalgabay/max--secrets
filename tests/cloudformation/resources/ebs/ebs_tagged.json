@@ -21,6 +21,10 @@
           {
             "Key": "new_tag",
             "Value": "new_value"
+          },
+          {
+            "Key": "yor_trace",
+            "Value": "82336ae6-fc0c-4ae3-8e8e-d07f05cf6ae3"
           }
         ],
         "AvailabilityZone": "us-west-2a"

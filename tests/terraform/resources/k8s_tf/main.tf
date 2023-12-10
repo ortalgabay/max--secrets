@@ -6,5 +6,6 @@ resource "aws_subnet" "eks_subnet" {
   tags = {
     Name                                    = "${local.prefix}-eks-subnet-1"
     "kubernetes.io/cluster/${local.prefix}" = "shared"
+    yor_trace                               = "eafc7480-ad81-4cc2-864e-68c007059916"
   }
 }

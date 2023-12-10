@@ -14,9 +14,13 @@ functions:
   myFunction:
     handler: myFunction.handler
     name: myFunction
+    tags:
+      yor_trace: 5f70291b-dcff-41ac-b1e9-d3a5ca97e242
   myFunction2:
     name: myFunction2
     handler: myFunction2.handler
+    tags:
+      yor_trace: 6c6a5746-e514-4f0a-885a-4871f21ac346
 
 resources: # CloudFormation template syntax
   Resources:

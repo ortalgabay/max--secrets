@@ -9,6 +9,10 @@
           {
             "Key": "new_tag",
             "Value": "new_value"
+          },
+          {
+            "Key": "yor_trace",
+            "Value": "f8e43561-9043-4b41-9d4f-b9473ce91c97"
           }
         ],
         "Encrypted": true,
@@ -21,6 +25,10 @@
           {
             "Key": "new_tag",
             "Value": "new_value"
+          },
+          {
+            "Key": "yor_trace",
+            "Value": "9b0308bb-acc2-414b-821c-d1e80d7fc280"
           }
         ]
       },
