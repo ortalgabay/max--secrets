@@ -12,6 +12,10 @@
           {
             "Key": "MyTag",
             "Value": "TagValue"
+          },
+          {
+            "Key": "yor_trace",
+            "Value": "076c3397-36bc-4786-89a3-3ae3c5c681e3"
           }
         ]
       },

@@ -4,7 +4,9 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-04169656fea786776
-
+      Tags:
+        - Key: yor_trace
+          Value: 0cca98f3-9e8a-45c1-9f77-ff9bc1981366
   EC2InstanceResource1:
     Type: AWS::EC2::Instance
     Properties:
@@ -15,6 +17,9 @@ Resources:
           GroupSet:
             - "myVPCEC2SecurityGroup"
           SubnetId: "PublicSubnet"
+      Tags:
+        - Key: yor_trace
+          Value: 35f60f01-4475-4f9e-ae6d-2a7e2b2068d9
 # Some unindented comment
   EC2LaunchTemplateResource0:
     Type: AWS::EC2::LaunchTemplate

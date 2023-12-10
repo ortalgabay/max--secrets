@@ -21,6 +21,9 @@ data aws_iam_policy_document "iam_policy_eks" {
 resource aws_iam_role "iam_for_eks" {
   name               = "${local.resource_prefix.value}-iam-for-eks"
   assume_role_policy = data.aws_iam_policy_document.iam_policy_eks.json
+  tags = {
+    yor_trace = "650f51f4-ae93-4546-9313-40d4ba937334"
+  }
 }
 
 resource aws_iam_role_policy_attachment "policy_attachment-AmazonEKSClusterPolicy" {
@@ -38,7 +41,8 @@ resource aws_vpc "eks_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
   tags = {
-    Name = "${local.resource_prefix.value}-eks-vpc"
+    Name      = "${local.resource_prefix.value}-eks-vpc"
+    yor_trace = "e6809dbf-c40f-460f-b951-4441e21745e5"
   }
 }
 
@@ -49,6 +53,7 @@ resource aws_subnet "eks_subnet1" {
   tags = {
     Name                                            = "${local.resource_prefix.value}-eks-subnet"
     "kubernetes.io/cluster/${local.eks_name.value}" = "shared"
+    yor_trace                                       = "f9d00649-1ebd-4388-a139-9bb4f6eff9fd"
   }
 }
 
@@ -59,6 +64,7 @@ resource aws_subnet "eks_subnet2" {
   tags = {
     Name                                            = "${local.resource_prefix.value}-eks-subnet2"
     "kubernetes.io/cluster/${local.eks_name.value}" = "shared"
+    yor_trace                                       = "7512cdb4-c8c8-41b8-b663-42973e22696f"
   }
 }
 
@@ -75,6 +81,9 @@ resource aws_eks_cluster "eks_cluster" {
     "aws_iam_role_policy_attachment.policy_attachment-AmazonEKSClusterPolicy",
     "aws_iam_role_policy_attachment.policy_attachment-AmazonEKSServicePolicy",
   ]
+  tags = {
+    yor_trace = "a62f8bd3-90f2-4d5f-9ef1-dfd8f724e0ee"
+  }
 }
 
 output "endpoint" {
